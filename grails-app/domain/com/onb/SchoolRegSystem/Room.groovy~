@@ -1,0 +1,7 @@
+package com.onb.SchoolRegSystem
+
+class Room {
+
+    static constraints = {
+    }
+}

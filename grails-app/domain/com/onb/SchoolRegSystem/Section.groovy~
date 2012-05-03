@@ -1,0 +1,16 @@
+package com.onb.SchoolRegSystem
+
+class Section {
+	final int maxStudent
+
+	Subject subject
+	TimeSlot timeSlot
+	Teacher teacher
+	Enrollment enrollment
+
+	static belongsTo = [Subject, TimeSlot, Teacher, Enrollment]
+	static hasMany = [enrollments: Enrollment]
+
+    static constraints = {
+    }
+}

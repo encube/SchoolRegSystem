@@ -1,0 +1,16 @@
+package com.onb.SchoolRegSystem
+
+class Subject {
+	String name
+	BigDecimal fee
+
+	Course course
+
+	static belongsTo = Course
+	static hasMany = [sections: Section]
+
+    static constraints = {
+	name nullable:false, blank:false
+	fee nullable:false, blank:false
+    }
+}
