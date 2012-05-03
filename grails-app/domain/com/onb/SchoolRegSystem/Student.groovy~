@@ -6,6 +6,11 @@ class Student {
 	int level
 	Date registrationDate
 
+	Course course
+
+	static belongsTo = Course
+	static hasMany = [enrollments: Enrollment]
+
     static constraints = {
 	idNumber nullable:false, blank:false, size:1..8, unique:true
 	name nullable:false, blank:false

@@ -6,10 +6,9 @@ class Section {
 	Subject subject
 	TimeSlot timeSlot
 	Teacher teacher
-	Enrollment enrollment
 
-	static belongsTo = [Subject, TimeSlot, Teacher, Enrollment]
 	static hasMany = [enrollments: Enrollment]
+	static belongsTo = [Subject, TimeSlot, Teacher, Enrollment]
 
     static constraints = {
     }
