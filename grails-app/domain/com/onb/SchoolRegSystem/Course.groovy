@@ -7,7 +7,11 @@ class Course {
 	static hasMany = [students: Student, subjects: Subject]
 
     static constraints = {
-	name nullable:false, blank:false
-	description nullable:false, blank:false
+		name nullable:false, blank:false
+		description nullable:false, blank:false
     }
+
+	def toString = {
+		name
+	}
 }

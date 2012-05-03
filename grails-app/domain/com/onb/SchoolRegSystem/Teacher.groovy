@@ -10,4 +10,8 @@ class Teacher {
 	idNumber nullable:false, blank:false, size:1..8, unique:true
 	name nullable:false, blank:false
     }
+
+	def toString = {
+		"${idNumber}: ${name}"
+	}
 }

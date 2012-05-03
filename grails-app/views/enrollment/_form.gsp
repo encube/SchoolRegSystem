@@ -26,3 +26,19 @@
 	<g:textField name="semester" required="" value="${enrollmentInstance?.semester}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: enrollmentInstance, field: 'sections', 'error')} ">
+	<label for="sections">
+		<g:message code="enrollment.sections.label" default="Sections" />
+		
+	</label>
+	<g:select name="sections" from="${com.onb.SchoolRegSystem.Section.list()}" multiple="multiple" optionKey="id" size="5" value="${enrollmentInstance?.sections*.id}" class="many-to-many"/>
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: enrollmentInstance, field: 'student', 'error')} required">
+	<label for="student">
+		<g:message code="enrollment.student.label" default="Student" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="student" name="student.id" from="${com.onb.SchoolRegSystem.Student.list()}" optionKey="id" required="" value="${enrollmentInstance?.student?.id}" class="many-to-one"/>
+</div>
+

@@ -17,4 +17,8 @@ class Student {
 	level nullable:false, blank:false, range:1..4
 	registrationDate nullable:false, blank:false
     }
+
+	def toString = {
+		"${idNumber}: ${name}"
+	}
 }

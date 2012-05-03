@@ -24,11 +24,23 @@
 				<thead>
 					<tr>
 					
+						<th><g:message code="section.subject.label" default="Subject" /></th>
+					
+						<th><g:message code="section.teacher.label" default="Teacher" /></th>
+					
+						<th><g:message code="section.timeSlot.label" default="Time Slot" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
 				<g:each in="${sectionInstanceList}" status="i" var="sectionInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${sectionInstance.id}">${fieldValue(bean: sectionInstance, field: "subject")}</g:link></td>
+					
+						<td>${fieldValue(bean: sectionInstance, field: "teacher")}</td>
+					
+						<td>${fieldValue(bean: sectionInstance, field: "timeSlot")}</td>
 					
 					</tr>
 				</g:each>

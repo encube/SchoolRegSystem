@@ -12,4 +12,8 @@ class Section {
 
     static constraints = {
     }
+
+	def toString = {
+		"${subject} (${timeSlot}) - ${teacher}"
+	}
 }

@@ -59,6 +59,26 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${studentInstance?.course}">
+				<li class="fieldcontain">
+					<span id="course-label" class="property-label"><g:message code="student.course.label" default="Course" /></span>
+					
+						<span class="property-value" aria-labelledby="course-label"><g:link controller="course" action="show" id="${studentInstance?.course?.id}">${studentInstance?.course?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${studentInstance?.enrollments}">
+				<li class="fieldcontain">
+					<span id="enrollments-label" class="property-label"><g:message code="student.enrollments.label" default="Enrollments" /></span>
+					
+						<g:each in="${studentInstance.enrollments}" var="e">
+						<span class="property-value" aria-labelledby="enrollments-label"><g:link controller="enrollment" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">
