@@ -14,6 +14,6 @@ class TimeSlot {
     }
 
 	public String toString(){
-		"${days} ${start} - ${end}"
+		"${days}  ${start} - ${end}"
 	}
 }

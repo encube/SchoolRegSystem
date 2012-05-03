@@ -20,6 +20,6 @@ class Student {
     }
 
 	public String toString(){
-		"${idNumber} ${name} ${level}"
+		"${name}  ${course} - ${level}"
 	}
 }

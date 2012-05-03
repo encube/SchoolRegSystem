@@ -18,11 +18,3 @@
 	<g:textField name="building" required="" value="${roomInstance?.building}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: roomInstance, field: 'sections', 'error')} ">
-	<label for="sections">
-		<g:message code="room.sections.label" default="Sections" />
-		
-	</label>
-	<g:select name="sections" from="${com.onb.SchoolRegSystem.Section.list()}" multiple="multiple" optionKey="id" size="5" value="${roomInstance?.sections*.id}" class="many-to-many"/>
-</div>
-

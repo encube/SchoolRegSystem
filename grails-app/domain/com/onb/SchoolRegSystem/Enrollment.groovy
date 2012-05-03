@@ -14,9 +14,10 @@ class Enrollment {
 		enrollmentDate nullable:false, blank:false
 		schoolYear nullable:false, blank:false
 		semester nullable:false, blank:false
+		student nullable:false, blank:false
     }
 
 	public String toString(){
-		"${enrollmentDate} ${schoolYear} ${semester}"
+		"${enrollmentDate}  ${schoolYear}  ${semester}"
 	}
 }
