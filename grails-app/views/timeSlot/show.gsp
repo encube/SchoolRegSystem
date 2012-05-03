@@ -50,6 +50,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${timeSlotInstance?.sections}">
+				<li class="fieldcontain">
+					<span id="sections-label" class="property-label"><g:message code="timeSlot.sections.label" default="Sections" /></span>
+					
+						<g:each in="${timeSlotInstance.sections}" var="s">
+						<span class="property-value" aria-labelledby="sections-label"><g:link controller="section" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

@@ -30,6 +30,8 @@
 					
 						<g:sortableColumn property="semester" title="${message(code: 'enrollment.semester.label', default: 'Semester')}" />
 					
+						<th><g:message code="enrollment.student.label" default="Student" /></th>
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -41,6 +43,8 @@
 						<td>${fieldValue(bean: enrollmentInstance, field: "schoolYear")}</td>
 					
 						<td>${fieldValue(bean: enrollmentInstance, field: "semester")}</td>
+					
+						<td>${fieldValue(bean: enrollmentInstance, field: "student")}</td>
 					
 					</tr>
 				</g:each>

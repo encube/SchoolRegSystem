@@ -10,4 +10,8 @@ class Teacher {
 	idNumber nullable:false, blank:false, size:1..8, unique:true
 	name nullable:false, blank:false
     }
+
+	public String toString(){
+		"${idNumber} ${name}"
+	}
 }

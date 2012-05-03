@@ -50,6 +50,26 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${enrollmentInstance?.sections}">
+				<li class="fieldcontain">
+					<span id="sections-label" class="property-label"><g:message code="enrollment.sections.label" default="Sections" /></span>
+					
+						<g:each in="${enrollmentInstance.sections}" var="s">
+						<span class="property-value" aria-labelledby="sections-label"><g:link controller="section" action="show" id="${s.id}">${s?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${enrollmentInstance?.student}">
+				<li class="fieldcontain">
+					<span id="student-label" class="property-label"><g:message code="enrollment.student.label" default="Student" /></span>
+					
+						<span class="property-value" aria-labelledby="student-label"><g:link controller="student" action="show" id="${enrollmentInstance?.student?.id}">${enrollmentInstance?.student?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form>
 				<fieldset class="buttons">

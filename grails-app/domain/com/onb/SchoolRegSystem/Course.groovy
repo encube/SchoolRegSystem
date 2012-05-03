@@ -10,4 +10,8 @@ class Course {
 	name nullable:false, blank:false
 	description nullable:false, blank:false
     }
+
+	public String toString(){
+		"${name} ${description}"
+	}
 }

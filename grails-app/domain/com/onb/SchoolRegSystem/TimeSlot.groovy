@@ -12,4 +12,8 @@ class TimeSlot {
 	start nullable:false, blank:false
 	end nullable:false, blank:false
     }
+
+	public String toString(){
+		"${days} ${start} - ${end}"
+	}
 }

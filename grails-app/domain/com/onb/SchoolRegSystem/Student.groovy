@@ -18,4 +18,8 @@ class Student {
 	registrationDate nullable:false, blank:false
 	course nullable:false, blank:false
     }
+
+	public String toString(){
+		"${idNumber} ${name} ${level}"
+	}
 }

@@ -15,4 +15,8 @@ class Enrollment {
 	schoolYear nullable:false, blank:false
 	semester nullable:false, blank:false
     }
+
+	public String toString(){
+		"${enrollmentDate} ${schoolYear} ${semester}"
+	}
 }

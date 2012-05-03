@@ -7,9 +7,13 @@ class Section {
 	TimeSlot timeSlot
 	Teacher teacher
 
-	static hasMany = [enrollments: Enrollment]
 	static belongsTo = [Subject, TimeSlot, Teacher, Enrollment]
+	static hasMany = [enrollments: Enrollment]
 
     static constraints = {
     }
+
+	public String toString(){
+		"${subject} ${timeSlot} ${teacher}"
+	}
 }
