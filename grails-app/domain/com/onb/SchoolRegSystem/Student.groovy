@@ -16,6 +16,7 @@ class Student {
 	name nullable:false, blank:false
 	level nullable:false, blank:false, range:1..4
 	registrationDate nullable:false, blank:false
+	course nullable:false, blank:false
     }
 
 	def toString = {

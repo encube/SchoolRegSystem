@@ -1,7 +1,7 @@
 package com.onb.SchoolRegSystem
 
 class Section {
-	final int maxStudent
+	final int maxStudent = 30
 
 	Subject subject
 	TimeSlot timeSlot
