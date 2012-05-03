@@ -1,15 +1,28 @@
 package com.onb.SchoolRegSystem
 
 class Subject {
-	String name
-	BigDecimal fee
+		String name
+		BigDecimal fee
 
 	static belongsTo = Course
 	static hasMany = [sections: Section, courses: Course]
 
     static constraints = {
+<<<<<<< HEAD
 	name nullable:false, blank:false
 	fee nullable:false, blank:false
 	courses minSize:1
     }
+
+	public String toString(){
+		"${name}"
+=======
+		name nullable:false, blank:false
+		fee nullable:false, blank:false
+    }
+
+	def toString = {
+		name
+>>>>>>> 34afd1ee398ad6665604789a7d17f1a901cc2bf2
+	}
 }

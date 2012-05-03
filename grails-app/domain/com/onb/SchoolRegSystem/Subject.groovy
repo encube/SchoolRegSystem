@@ -1,8 +1,8 @@
 package com.onb.SchoolRegSystem
 
 class Subject {
-	String name
-	BigDecimal fee
+		String name
+		BigDecimal fee
 
 	static belongsTo = Course
 	static hasMany = [sections: Section, courses: Course]

@@ -7,7 +7,18 @@ class Room {
 	static hasMany = [sections: Section]
 
     static constraints = {
-	idNumber nullable:false, blank:false
-	building nullable:false, blank:false
+		idNumber nullable:false, blank:false
+		building nullable:false, blank:false
     }
+
+<<<<<<< HEAD
+	public String toString(){
+		"${idNumber} ${building}"
+	}
+=======
+	def toString = {
+		"${building} - ${idNumber}"
+	}
+
+>>>>>>> 34afd1ee398ad6665604789a7d17f1a901cc2bf2
 }

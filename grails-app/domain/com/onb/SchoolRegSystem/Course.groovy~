@@ -7,7 +7,16 @@ class Course {
 	static hasMany = [students: Student, subjects: Subject]
 
     static constraints = {
-	name nullable:false, blank:false
-	description nullable:false, blank:false
+		name nullable:false, blank:false
+		description nullable:false, blank:false
     }
+
+<<<<<<< HEAD
+	public String toString(){
+		"${name} ${description}"
+=======
+	def toString = {
+		name
+>>>>>>> 34afd1ee398ad6665604789a7d17f1a901cc2bf2
+	}
 }

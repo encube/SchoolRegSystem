@@ -10,4 +10,13 @@ class Teacher {
 	idNumber nullable:false, blank:false, size:1..8, unique:true
 	name nullable:false, blank:false
     }
+
+<<<<<<< HEAD
+	public String toString(){
+		"${idNumber} ${name}"
+=======
+	def toString = {
+		"${idNumber}: ${name}"
+>>>>>>> 34afd1ee398ad6665604789a7d17f1a901cc2bf2
+	}
 }

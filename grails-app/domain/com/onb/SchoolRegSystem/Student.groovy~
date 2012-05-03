@@ -18,4 +18,13 @@ class Student {
 	registrationDate nullable:false, blank:false
 	course nullable:false, blank:false
     }
+
+<<<<<<< HEAD
+	public String toString(){
+		"${idNumber} ${name} ${level}"
+=======
+	def toString = {
+		"${idNumber}: ${name}"
+>>>>>>> 34afd1ee398ad6665604789a7d17f1a901cc2bf2
+	}
 }

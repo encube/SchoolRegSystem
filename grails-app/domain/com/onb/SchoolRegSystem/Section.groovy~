@@ -12,4 +12,13 @@ class Section {
 
     static constraints = {
     }
+
+<<<<<<< HEAD
+	public String toString(){
+		"${subject} ${timeSlot} ${teacher}"
+=======
+	def toString = {
+		"${subject} (${timeSlot}) - ${teacher}"
+>>>>>>> 34afd1ee398ad6665604789a7d17f1a901cc2bf2
+	}
 }
