@@ -1,6 +1,6 @@
 package com.onb.SchoolRegSystem
 
-class Student {
+class Student extends User{
 	String idNumber
 	String name
 	int level
