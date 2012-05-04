@@ -6,7 +6,7 @@ class ConflictCheckerService {
 		return ( scheduleCollision(thisClass.timeSlot, thatClass.timeSlot) )		
 	}
 
-	def subjectCollision = { Subject thisSubject, Subject thatSubject
+	def subjectCollision = { Subject thisSubject, Subject thatSubject ->
 		return ( thisSubject.name.equals(thatSubject.name) )
 	}
 
