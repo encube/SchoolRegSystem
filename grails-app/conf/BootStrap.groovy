@@ -26,7 +26,11 @@ class BootStrap {
 			passwordExpired: false).save()
 		UserRole.create(users.admin2, roles.admin)
 
-		new Role(authority: "ROLE_STUDENT").save()
+		roles.student = Role.findByAuthority("ROLE_STUDENT") ?: \
+			new Role(authority: "ROLE_STUDENT").save()
+
+		roles.teacher = Role.findByAuthority("ROLE_TEACHER") ?: \
+			new Role(authority: "ROLE_TEACHER").save()
 	}
     def destroy = {
     }

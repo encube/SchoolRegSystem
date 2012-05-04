@@ -23,6 +23,24 @@
 			</g:if>
 			<ol class="property-list teacher">
 			
+				<g:if test="${teacherInstance?.username}">
+				<li class="fieldcontain">
+					<span id="username-label" class="property-label"><g:message code="teacher.username.label" default="Username" /></span>
+					
+						<span class="property-value" aria-labelledby="username-label"><g:fieldValue bean="${teacherInstance}" field="username"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${teacherInstance?.password}">
+				<li class="fieldcontain">
+					<span id="password-label" class="property-label"><g:message code="teacher.password.label" default="Password" /></span>
+					
+						<span class="property-value" aria-labelledby="password-label"><g:fieldValue bean="${teacherInstance}" field="password"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${teacherInstance?.idNumber}">
 				<li class="fieldcontain">
 					<span id="idNumber-label" class="property-label"><g:message code="teacher.idNumber.label" default="Id Number" /></span>
@@ -37,6 +55,42 @@
 					<span id="name-label" class="property-label"><g:message code="teacher.name.label" default="Name" /></span>
 					
 						<span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${teacherInstance}" field="name"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${teacherInstance?.accountExpired}">
+				<li class="fieldcontain">
+					<span id="accountExpired-label" class="property-label"><g:message code="teacher.accountExpired.label" default="Account Expired" /></span>
+					
+						<span class="property-value" aria-labelledby="accountExpired-label"><g:formatBoolean boolean="${teacherInstance?.accountExpired}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${teacherInstance?.accountLocked}">
+				<li class="fieldcontain">
+					<span id="accountLocked-label" class="property-label"><g:message code="teacher.accountLocked.label" default="Account Locked" /></span>
+					
+						<span class="property-value" aria-labelledby="accountLocked-label"><g:formatBoolean boolean="${teacherInstance?.accountLocked}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${teacherInstance?.enabled}">
+				<li class="fieldcontain">
+					<span id="enabled-label" class="property-label"><g:message code="teacher.enabled.label" default="Enabled" /></span>
+					
+						<span class="property-value" aria-labelledby="enabled-label"><g:formatBoolean boolean="${teacherInstance?.enabled}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${teacherInstance?.passwordExpired}">
+				<li class="fieldcontain">
+					<span id="passwordExpired-label" class="property-label"><g:message code="teacher.passwordExpired.label" default="Password Expired" /></span>
+					
+						<span class="property-value" aria-labelledby="passwordExpired-label"><g:formatBoolean boolean="${teacherInstance?.passwordExpired}" /></span>
 					
 				</li>
 				</g:if>

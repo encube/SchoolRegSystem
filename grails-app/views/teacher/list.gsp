@@ -24,9 +24,17 @@
 				<thead>
 					<tr>
 					
+						<g:sortableColumn property="username" title="${message(code: 'teacher.username.label', default: 'Username')}" />
+					
+						<g:sortableColumn property="password" title="${message(code: 'teacher.password.label', default: 'Password')}" />
+					
 						<g:sortableColumn property="idNumber" title="${message(code: 'teacher.idNumber.label', default: 'Id Number')}" />
 					
 						<g:sortableColumn property="name" title="${message(code: 'teacher.name.label', default: 'Name')}" />
+					
+						<g:sortableColumn property="accountExpired" title="${message(code: 'teacher.accountExpired.label', default: 'Account Expired')}" />
+					
+						<g:sortableColumn property="accountLocked" title="${message(code: 'teacher.accountLocked.label', default: 'Account Locked')}" />
 					
 					</tr>
 				</thead>
@@ -34,9 +42,17 @@
 				<g:each in="${teacherInstanceList}" status="i" var="teacherInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${teacherInstance.id}">${fieldValue(bean: teacherInstance, field: "idNumber")}</g:link></td>
+						<td><g:link action="show" id="${teacherInstance.id}">${fieldValue(bean: teacherInstance, field: "username")}</g:link></td>
+					
+						<td>${fieldValue(bean: teacherInstance, field: "password")}</td>
+					
+						<td>${fieldValue(bean: teacherInstance, field: "idNumber")}</td>
 					
 						<td>${fieldValue(bean: teacherInstance, field: "name")}</td>
+					
+						<td><g:formatBoolean boolean="${teacherInstance.accountExpired}" /></td>
+					
+						<td><g:formatBoolean boolean="${teacherInstance.accountLocked}" /></td>
 					
 					</tr>
 				</g:each>

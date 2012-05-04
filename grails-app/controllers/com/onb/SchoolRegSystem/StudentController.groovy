@@ -25,6 +25,10 @@ class StudentController {
             render(view: "create", model: [studentInstance: studentInstance])
             return
         }
+	else{
+		def role = Role.findByAuthority('ROLE_STUDENT')
+		UserRole.create(studentInstance, role)
+	}
 
 		flash.message = message(code: 'default.created.message', args: [message(code: 'student.label', default: 'Student'), studentInstance.id])
         redirect(action: "show", id: studentInstance.id)

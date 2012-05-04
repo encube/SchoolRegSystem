@@ -26,9 +26,11 @@
 					
 						<th><g:message code="section.subject.label" default="Subject" /></th>
 					
+						<th><g:message code="section.timeSlot.label" default="Time Slot" /></th>
+					
 						<th><g:message code="section.teacher.label" default="Teacher" /></th>
 					
-						<th><g:message code="section.timeSlot.label" default="Time Slot" /></th>
+						<th><g:message code="section.room.label" default="Room" /></th>
 					
 					</tr>
 				</thead>
@@ -38,9 +40,11 @@
 					
 						<td><g:link action="show" id="${sectionInstance.id}">${fieldValue(bean: sectionInstance, field: "subject")}</g:link></td>
 					
+						<td>${fieldValue(bean: sectionInstance, field: "timeSlot")}</td>
+					
 						<td>${fieldValue(bean: sectionInstance, field: "teacher")}</td>
 					
-						<td>${fieldValue(bean: sectionInstance, field: "timeSlot")}</td>
+						<td>${fieldValue(bean: sectionInstance, field: "room")}</td>
 					
 					</tr>
 				</g:each>

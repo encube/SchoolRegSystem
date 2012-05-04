@@ -1,6 +1,6 @@
 package com.onb.SchoolRegSystem
 
-class Teacher {
+class Teacher extends User{
 	String idNumber
 	String name
 
