@@ -29,8 +29,27 @@ class BootStrap {
 		roles.student = Role.findByAuthority("ROLE_STUDENT") ?: \
 			new Role(authority: "ROLE_STUDENT").save()
 
+		users.student = User.findByUsername('student') ?: \
+			new User(username: 'student',
+			password: 'test', \
+			enabled: true, \
+			accountExpired: false, \
+			accountLocked: false, \
+			passwordExpired: false).save()
+		UserRole.create(users.student, roles.student)
+
+
 		roles.teacher = Role.findByAuthority("ROLE_TEACHER") ?: \
 			new Role(authority: "ROLE_TEACHER").save()
+
+		users.teacher = User.findByUsername('teacher') ?: \
+			new User(username: 'teacher',
+			password: 'test', \
+			enabled: true, \
+			accountExpired: false, \
+			accountLocked: false, \
+			passwordExpired: false).save()
+		UserRole.create(users.teacher, roles.teacher)
 	}
     def destroy = {
     }
