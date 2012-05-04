@@ -82,6 +82,7 @@
 	</head>
 	<body>
 		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+		<!--
 		<div id="status" role="complementary">
 			<h1>Application Status</h1>
 			<ul>
@@ -101,20 +102,23 @@
 					<li>${plugin.name} - ${plugin.version}</li>
 				</g:each>
 			</ul>
-		</div>
+		</div> -->
 		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
+			<h1>Welcome to eCoach Technology Bus</h1>
+			<p>This page will allow you to enroll students, create classes, add teachers and things like that. So just do whatever stuffs
+				you want to do. You'll notice that below over there is a list of controllers that are currently deployed in this application,
 			   click on each to execute its default action:</p>
 
 			<div id="controller-list" role="navigation">
 				<h2>Available Controllers:</h2>
 				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
+					<g:each var="c" in="${grailsApplication.controllerClasses}">
+                    <li class="controller">
+                        <g:link controller="${c.logicalPropertyName}">
+                            ${c.getPropertyOrStaticPropertyOrFieldValue("controllerShowName", String.class)}
+                        </g:link>
+                    </li>
+              		</g:each>
 				</ul>
 			</div>
 		</div>

@@ -2,6 +2,8 @@ import org.codehaus.groovy.grails.plugins.springsecurity.SpringSecurityUtils
 
 class LogoutController {
 
+	public static String controllerShowName = "Logout"
+	
 	/**
 	 * Index action. Redirects to the Spring security logout uri.
 	 */

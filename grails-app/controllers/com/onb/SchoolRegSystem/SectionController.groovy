@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class SectionController {
 
+	public static String controllerShowName = "List of sections"
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
