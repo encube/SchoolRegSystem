@@ -12,6 +12,6 @@ class Teacher extends User{
     }
 
 	public String toString(){
-		"${name}"
+		"${idNumber}: ${name}"
 	}
 }

@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class TimeSlotController {
 
+	public static String controllerShowName = "Display Time Slots"
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

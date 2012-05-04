@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class EnrollmentController {
 
+	public static String controllerShowName = "Enrollment area"
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

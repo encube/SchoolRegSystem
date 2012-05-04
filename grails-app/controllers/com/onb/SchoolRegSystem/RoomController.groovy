@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class RoomController {
 
+	public static String controllerShowName = "Room assignments"
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

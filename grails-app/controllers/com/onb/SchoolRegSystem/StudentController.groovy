@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class StudentController {
 
+	public static String controllerShowName = "List of Enrolled Students"
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {

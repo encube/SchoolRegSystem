@@ -4,6 +4,8 @@ import org.springframework.dao.DataIntegrityViolationException
 
 class SubjectController {
 
+	public static String controllerShowName = "List of Subjects"
+	
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
     def index() {
