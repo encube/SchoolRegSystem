@@ -1,7 +1,7 @@
 package com.onb.SchoolRegSystem
 
 class ConflictCheckerService {
-
+/*	
 	def classConflictExists = { Section thisClass, Section thatClass ->
 		return ( scheduleCollision(thisClass.timeSlot, thatClass.timeSlot) )		
 	}
@@ -14,5 +14,5 @@ class ConflictCheckerService {
 		return	( 	thisSchedule.start <= thatSchedule.start || thatSchedule.start <= thisSchedule.end 	||
 					thatSchedule.start <= thisSchedule.start || thisSchedule.start <= thatSchedule.end	)
 	}
-
+*/
 }
