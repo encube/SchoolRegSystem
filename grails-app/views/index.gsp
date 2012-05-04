@@ -41,7 +41,7 @@
 			}
 
 			#page-body {
-				margin: 2em 1em 1.25em 18em;
+				margin: 1em 1em 1.25em 18em;
 			}
 
 			h2 {
@@ -110,7 +110,7 @@
 			   click on each to execute its default action:</p>
 
 			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
+				<h2>Main menu:</h2>
 				<ul>
 					<g:each var="c" in="${grailsApplication.controllerClasses}">
                     <li class="controller">
