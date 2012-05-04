@@ -11,8 +11,8 @@ class ConflictCheckerService {
 	}
 
 	def scheduleCollision = { TimeSlot thisSchedule, TimeSlot thatSchedule ->
-		return	( 	thisSchedule.start <= thatSchedule.start <= (thisSchedule.end) 	||
-					thatSchedule.start <= thisSchedule.start <= (thatSchedule.end)	)
+		return	( 	thisSchedule.start <= thatSchedule.start || thatSchedule.start <= thisSchedule.end 	||
+					thatSchedule.start <= thisSchedule.start || thisSchedule.start <= thatSchedule.end	)
 	}
 
 }
