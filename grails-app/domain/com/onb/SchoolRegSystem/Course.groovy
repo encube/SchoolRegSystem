@@ -12,6 +12,6 @@ class Course {
     }
 
 	public String toString(){
-		"${name} ${description}"
+		"${name}"
 	}
 }

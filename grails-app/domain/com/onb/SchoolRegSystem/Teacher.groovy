@@ -12,6 +12,6 @@ class Teacher {
     }
 
 	public String toString(){
-		"${idNumber} ${name}"
+		"${idNumber}: ${name}"
 	}
 }

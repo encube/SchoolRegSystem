@@ -13,10 +13,10 @@ class Enrollment {
     static constraints = {
 		enrollmentDate nullable:false, blank:false
 		schoolYear nullable:false, blank:false
-		semester nullable:false, blank:false
+		semester nullable:false, blank:false, inList['Summer','1st', '2nd']
     }
 
 	public String toString(){
-		"${enrollmentDate} ${schoolYear} ${semester}"
+		"${semester} semester - S.Y. ${schoolYear} [${enrollmentDate}]"
 	}
 }

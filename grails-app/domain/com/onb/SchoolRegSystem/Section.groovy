@@ -10,10 +10,10 @@ class Section {
 	static belongsTo = [Subject, TimeSlot, Teacher, Enrollment]
 	static hasMany = [enrollments: Enrollment]
 
-    static constraints = {
-    }
+	static constraints = {
+	}
 
 	public String toString(){
-		"${subject} ${timeSlot} ${teacher}"
+		"${subject} (${timeSlot}) - ${teacher}"
 	}
 }
