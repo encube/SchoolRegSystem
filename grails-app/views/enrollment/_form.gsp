@@ -23,7 +23,7 @@
 		<g:message code="enrollment.semester.label" default="Semester" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="semester" required="" value="${enrollmentInstance?.semester}"/>
+	<g:select name="semester" from="${enrollmentInstance.constraints.semester.inList}" required="" value="${enrollmentInstance?.semester}" valueMessagePrefix="enrollment.semester"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: enrollmentInstance, field: 'student', 'error')} required">
