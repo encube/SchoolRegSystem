@@ -41,7 +41,7 @@
 			}
 
 			#page-body {
-				margin: 1em 1em 1.25em 18em;
+				margin: 1em 1em 1.25em 3em;
 			}
 
 			h2 {
@@ -77,6 +77,10 @@
 				#page-body h1 {
 					margin-top: 0;
 				}
+				
+				#copyright-body {
+					margin: 0 0 0;
+				}
 			}
 		</style>
 	</head>
@@ -105,7 +109,7 @@
 		</div> -->
 		<div id="page-body" role="main">
 			<h1>Welcome to eCoach Technology Bus</h1>
-			<p>This page will allow you to enroll students, create classes, add teachers and things like that. So just do whatever stuffs
+			<p>This page will allow you to enroll students, create classes, add teachers and things like that. So just do whatever stuff
 				you want to do. You'll notice that below over there is a list of controllers that are currently deployed in this application,
 			   click on each to execute its default action:</p>
 
@@ -121,6 +125,9 @@
               		</g:each>
 				</ul>
 			</div>
+		</div>
+		<div id="copyright-body" role="complimentary">
+			<h4 align=center>Copyright (c) 2012 eCoach. Made with Groovy and Grails with the help of O&B.</h1>
 		</div>
 	</body>
 </html>
